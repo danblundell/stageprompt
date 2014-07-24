@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/alphagov/stageprompt.png?branch=master)](https://travis-ci.org/alphagov/stageprompt?branch=master)
-
 # Stageprompt
 
 `Stageprompt` is a javascript library for tracking a user journey in an
@@ -9,19 +7,19 @@ analytics product.
 
 ## Download
 
-Latest version: [stageprompt.2.0.1.js](https://github.com/alphagov/stageprompt/releases/2.0.1/2460/stageprompt.2.0.1.js)
+Latest version: [stageprompt.2.0.1.js](https://github.com/danblundell/stageprompt/releases/2.0.1/2460/stageprompt.2.0.1.js)
 
 ## Dependencies
 
 - An analytics product, such as Google Analytics or Piwik
-- jQuery (currently mirroring the version from https://github.com/alphagov/static/tree/master/app/assets/javascripts/libs/jquery)
+- jQuery
 
 ## Running tests
 
-You can run the tests using [Rake](http://rake.rubyforge.org/) and [Jasmine](http://pivotal.github.io/jasmine/). 
+You can run the tests using [Rake](http://rake.rubyforge.org/) and [Jasmine](http://pivotal.github.io/jasmine/).
 
 Setup your environment:
- 
+
 * Install Ruby 1.9.3
 * in the project folder, run: `bundle install`
 
@@ -108,7 +106,7 @@ user is redirected back to GOV.UK at `/pay-register-birth-abroad/done`:
 
 ### User click events
 
-User click events are fired when the annotated element is clicked. Add a 
+User click events are fired when the annotated element is clicked. Add a
 `data-journey-click` attribute to the element clicked by the user.
 
 For example:
@@ -127,9 +125,3 @@ The event identifier is split up and stored in the following fields.
 - the transaction identifier is stored in the category field
 - the event type is stored in the event field
 - the event identifier is stored in the label field
-
-## Backdrop integration
-
-When sent to backdrop through the backdrop-ga-collector the event identifier
-is further broken down by colon allowing you to create finer grained namespaces
-for your event identifiers.
